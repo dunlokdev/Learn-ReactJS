@@ -3,6 +3,10 @@
   background-color: #0d6efd;
   color: #fff;
   border-radius: 8px;
+  cursor: pointer;
+  &--delete {
+    background-color: red;
+  }
 }
 .text-red {
   color: red;
