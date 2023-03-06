@@ -17,9 +17,16 @@ class AddUserInfo extends React.Component {
     });
   }
 
-  handleOnChangeInput = (event) => {
+  handleOnChangeName = (event) => {
     this.setState({
       name: event.target.value,
+    });
+  };
+
+  handleOnChangeAge = (event) => {
+    this.setState({
+      // ! bad code this.state.age = event.target.age
+      age: event.target.value,
     });
   };
 
@@ -47,14 +54,14 @@ class AddUserInfo extends React.Component {
             type='text'
             value={this.state.name}
             onChange={(event) => {
-              this.handleOnChangeInput(event);
+              this.handleOnChangeName(event);
             }}
           />
           <input
             type='text'
             value={this.state.age}
             onChange={(event) => {
-              this.handleOnChangeInput(event);
+              this.handleOnChangeAge(event);
             }}
           />
           <button>Submit</button>

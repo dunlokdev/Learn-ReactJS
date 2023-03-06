@@ -1,4 +1,5 @@
 import React from 'react';
+import './UserInfo.scss';
 
 class UserInfo extends React.Component {
   state = {
@@ -30,7 +31,10 @@ class UserInfo extends React.Component {
           <div>
             {listUser.map((user) => {
               return (
-                <div key={user.id}>
+                <div
+                  key={user.id}
+                  className={user.age > 18 ? 'text-red' : 'text-green'}
+                >
                   <h3>My name is {user.name}</h3>
                   <p>Age: {user.age}</p>
                 </div>
