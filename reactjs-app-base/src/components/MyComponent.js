@@ -1,6 +1,6 @@
 import React from 'react';
 import AddUserInfo from './AddUserInfo';
-import UserInfo from './UseInfo';
+import DisplayInfor from './DisplayInfor';
 
 class MyComponent extends React.Component {
   constructor(props) {
@@ -33,7 +33,7 @@ class MyComponent extends React.Component {
     return (
       <div>
         <AddUserInfo handleAddNewUser={this.handleAddNewUser} />
-        <UserInfo
+        <DisplayInfor
           listUser={this.state.listUser}
           handleDeleteUser={this.handleDeleteUser}
         />

@@ -1,7 +1,7 @@
 import React from 'react';
-import './UserInfo.scss';
+import './DisplayInfor.scss';
 
-class UserInfo extends React.Component {
+class DisplayInfor extends React.Component {
   state = {
     isShow: true,
   };
@@ -58,4 +58,4 @@ class UserInfo extends React.Component {
   }
 }
 
-export default UserInfo;
+export default DisplayInfor;
