@@ -1,4 +1,4 @@
-import React, { useState } from 'react';
+import React, { useEffect, useState } from 'react';
 import './DisplayInfor.scss';
 
 // class DisplayInfor extends React.Component {
@@ -59,9 +59,15 @@ import './DisplayInfor.scss';
 // }
 
 const DisplayInfor = (props) => {
-  const { listUser } = props;
+  const { listUser, handleDeleteUser } = props;
 
   const [isShowHideListUser, setShowHideListUser] = useState(true);
+
+  console.log('>>> call me render');
+
+  useEffect(() => {
+    console.log('>>> call me useEffect');
+  }, []);
 
   return (
     <div>
@@ -70,6 +76,7 @@ const DisplayInfor = (props) => {
           Show list user
         </span>
       </div>
+
       {isShowHideListUser && (
         <>
           {listUser.map((user) => {
@@ -83,7 +90,7 @@ const DisplayInfor = (props) => {
                 <div>
                   <span
                     className='btn btn--delete'
-                    onClick={() => props.handleDeleteUser(user.id)}
+                    onClick={() => handleDeleteUser(user.id)}
                   >
                     Delete
                   </span>
