@@ -66,21 +66,15 @@ const DisplayInfor = (props) => {
   return (
     <div>
       <div>
-        <span
-          onClick={() => setShowHideListUser(!isShowHideListUser)}
-          className='btn'
-        >
+        <span onClick={() => setShowHideListUser(!isShowHideListUser)}>
           Show list user
         </span>
       </div>
       {isShowHideListUser && (
-        <div>
+        <>
           {listUser.map((user) => {
             return (
-              <div
-                key={user.id}
-                className={+user.age > 18 ? 'text-red' : 'text-green'}
-              >
+              <div key={user.id} className='user-info'>
                 <div>
                   <h3>My name is {user.name}</h3>
                   <p>Age: {user.age}</p>
@@ -97,7 +91,7 @@ const DisplayInfor = (props) => {
               </div>
             );
           })}
-        </div>
+        </>
       )}
     </div>
   );
